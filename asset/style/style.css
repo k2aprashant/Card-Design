@@ -1,0 +1,137 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --headingColor: black;
+    --white: white;
+    --paraColor: #b3b3b3;
+    --socialColor: #5e6e6d;
+    --cardColor: #f2f2f2;
+    --para: 'Martel Sans', sans-serif;
+    --main_heading: 'Averia Serif Libre', serif;
+    --main_heading1: 'Montserrat', sans-serif;
+}
+body{
+    background-color: var(--white);
+}
+
+/* ************* common css ********** */
+img{
+    width:100%;
+}
+.card_design_heading{
+    text-align: center;
+    padding: 70px 0px;
+}
+.card_design_heading h4{
+    color: var(--paraColor);
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: var(--para);
+}
+.card_design_heading h1{
+    color: var(--headingColor);
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: var(--main_heading1);
+}
+.card_design_heading .dash{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.card_design_heading .dash div{
+    width: 30px;
+    height: 5px;
+    background-color: var(--socialColor);
+}
+
+/* *********** Card Css *********** */
+.card_box_content{
+    background-color: var(--cardColor);
+}
+.card_img{
+    height: 180px;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+}
+.social_link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social_link div{
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--socialColor);
+    line-height: 40px;
+    text-align: center;
+    margin: 0 5px;
+    border-radius: 50%;
+    color: var(--socialColor);
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.social_link div:hover{
+    background-color: var(--socialColor);
+    color: var(--cardColor);
+}
+.card_content{
+    text-align: center;
+}
+.card_content h1{
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: -1px;
+    word-spacing: 2px;
+    font-family: var(--main_heading);
+}
+.card_content .desig{
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+    color: var(--paraColor);
+    font-family: var(--para);
+}
+.card_content .card_para{
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--paraColor);
+    font-family: var(--para);
+}
+
+/* ********** media query *********** */
+@media screen and (max-width:575px){
+    .card_box_content{
+        margin: 0px 80px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .card_design_heading h1{
+        font-size: 2.3rem;
+    }
+    .card_design_heading h4{
+        font-size: 0.9rem;
+    }
+    .card_box_content{
+        margin: 0px 30px;
+    }
+}
+
+@media screen and (max-width:360px){
+    .card_design_heading h1{
+        font-size: 2.1rem;
+    }
+    .card_design_heading h4{
+        font-size: 0.8rem;
+    }
+    .card_box_content{
+        margin: 0px 0px;
+    }
+}
